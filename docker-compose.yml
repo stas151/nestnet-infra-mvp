@@ -2,7 +2,9 @@ version: '3.8'
 
 services:
   substrate:
-    build: ./polkadot-sdk
+    build:  
+      context: ./substrate-node
+
     ports:
       - "9944:9944"
       - "9933:9933"
