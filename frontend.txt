@@ -1,0 +1,3 @@
+
+# Пример для Next.js:
+npx create-next-app frontend

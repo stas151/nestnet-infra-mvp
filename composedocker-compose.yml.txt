@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  substrate:
+    build: ../substrate-node
+    ports:
+      - "9944:9944"
+      - "9933:9933"
+
+  dag:
+    build: ../dag-node
+    ports:
+      - "7070:7070"
+
+  localchain:
+    build: ../localchain
+    ports:
+      - "8080:8080"
+
+  ipfs:
+    image: ipfs/go-ipfs:latest
+    ports:
+      - "4001:4001"
+      - "5001:5001"
+    volumes:
+      - ipfs-data:/data/ipfs
+
+  backend:
+    build: ../backend
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ../frontend
+    ports:
+      - "3000:3000"
+
+volumes:
+  ipfs-data:
