@@ -1,0 +1,1 @@
+# Dockerfile для Substrate node

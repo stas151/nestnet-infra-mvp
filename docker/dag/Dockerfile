@@ -1,0 +1,1 @@
+# Dockerfile для DAG узла
